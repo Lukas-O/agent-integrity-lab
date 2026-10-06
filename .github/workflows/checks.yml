@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
       AWS_EC2_METADATA_DISABLED: "true"
@@ -26,6 +26,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install --yes bubblewrap
+      - name: Check namespace support and permit Bubblewrap on this CI runner
+        run: bash .github/ci/prepare-sandbox.sh
       - run: uv sync --frozen
       - run: uv run ruff check src scripts analysis tests environments
       - run: uv run pytest

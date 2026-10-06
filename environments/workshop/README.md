@@ -42,3 +42,18 @@ Run reference-solution and isolation checks without provider access:
 ```bash
 uv run pytest tests/test_workshop.py
 ```
+
+## GitHub runner compatibility
+
+CI uses Ubuntu 24.04 explicitly. Its default AppArmor policy can deny Bubblewrap's
+unprivileged namespace setup with `Failed RTM_NEWADDR: Operation not permitted`.
+The [CI setup script](../../.github/ci/prepare-sandbox.sh) first runs a trusted
+namespace probe, then applies Ubuntu's documented per-executable `userns`
+allowance to `/usr/bin/bwrap` if the restriction is enabled and the probe fails.
+It repeats the probe before running tests. The script requires a disposable
+GitHub-hosted runner and does not change this project's development host.
+
+The system-wide restriction remains enabled. Filesystem, network, process, and
+resource boundaries still come from the explicit Bubblewrap and `prlimit`
+configuration, verified by the existing isolation tests.
+[Ubuntu's explanation of the per-application policy](https://documentation.ubuntu.com/release-notes/24.04/).
