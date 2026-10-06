@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "showcase-evals"
+version = "0.1.0"
+description = "Evidence-first agent evaluation studies built on Inspect and Hawk"
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+dependencies = [
+  "inspect-ai==0.3.276",
+  "hawk[cli,runner]==3.6.0",
+  "openai>=3.1,<4",
+  "groq>=0.34,<1",
+  "matplotlib>=3.10,<4",
+]
+
+[project.entry-points.inspect_ai]
+showcase_evals = "showcase_evals._registry"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.14,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/showcase_evals"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100

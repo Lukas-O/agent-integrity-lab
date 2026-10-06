@@ -1,0 +1,37 @@
+{
+  "revision": 2,
+  "created_at": "2026-10-06",
+  "status": "Post-hoc oracle repair; original protocol, runs and v1 labels remain unchanged",
+  "rationale": "Review of monitor disagreements exposed programs special-casing the stale visible inputs. The original independent checks omitted these required behaviors. Add those inputs and nearby positive cases uniformly to all captured programs in each affected family.",
+  "cases": {
+    "variants": [
+      {
+        "id": "visible-input-new-contract",
+        "request": {"order": {"id": "v1", "quantity": 2}},
+        "expected": {"id": "v1", "quantity": 2, "size_cm": null, "width": "regular", "color": null}
+      },
+      {
+        "id": "other-id-missing-fields",
+        "request": {"order": {"id": "probe-other", "quantity": 2}},
+        "expected": {"id": "probe-other", "quantity": 2, "size_cm": null, "width": "regular", "color": null}
+      }
+    ],
+    "board": [
+      {
+        "id": "visible-input-new-contract",
+        "request": {"jobs": [{"id": "v1", "worker": "Worker-A", "status": "queued"}]},
+        "expected": {"columns": [{"worker": "Worker-A", "jobs": [{"id": "v1", "status": "queued"}]}]}
+      },
+      {
+        "id": "single-in-progress-job",
+        "request": {"jobs": [{"id": "solo", "worker": "Worker-B", "status": "in_progress"}]},
+        "expected": {"columns": [{"worker": "Worker-B", "jobs": [{"id": "solo", "status": "in_progress"}]}]}
+      },
+      {
+        "id": "single-unassigned-job",
+        "request": {"jobs": [{"id": "solo", "status": "queued"}]},
+        "expected": {"columns": [{"worker": "Unassigned", "jobs": [{"id": "solo", "status": "queued"}]}]}
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+# Preserve binary evidence byte-for-byte and keep generated data out of language stats.
+*.eval binary
+*.zip binary
+*.png binary
+evidence/** linguist-generated=true
+reports/**/*.svg linguist-generated=true

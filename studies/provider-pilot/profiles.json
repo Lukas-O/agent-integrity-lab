@@ -1,0 +1,14 @@
+[
+  {"id":"groq-oss20-low","model":"groq/openai/gpt-oss-20b","effort":"low"},
+  {"id":"groq-oss20-medium","model":"groq/openai/gpt-oss-20b","effort":"medium"},
+  {"id":"groq-oss20-high","model":"groq/openai/gpt-oss-20b","effort":"high"},
+  {"id":"groq-oss120-low","model":"groq/openai/gpt-oss-120b","effort":"low"},
+  {"id":"groq-oss120-high","model":"groq/openai/gpt-oss-120b","effort":"high"},
+  {"id":"groq-qwen-low","model":"groq/qwen/qwen3.8-27b","effort":"low"},
+  {"id":"groq-qwen-high","model":"groq/qwen/qwen3.8-27b","effort":"high"},
+  {"id":"or-nemotron-low","model":"free_openrouter/nvidia/nemotron-3-super-120b-a12b:free","effort":"low"},
+  {"id":"or-nemotron-medium","model":"free_openrouter/nvidia/nemotron-3-super-120b-a12b:free","effort":"medium"},
+  {"id":"or-gemma-off","model":"free_openrouter/google/gemma-4-31b-it:free","thinking":false},
+  {"id":"or-gemma-on","model":"free_openrouter/google/gemma-4-31b-it:free","thinking":true},
+  {"id":"or-liquid-on","model":"free_openrouter/liquid/lfm-2.5-2.6b:free"}
+]
