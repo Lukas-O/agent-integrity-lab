@@ -4,7 +4,7 @@
 
 **30 attempted episodes; 29 without a recorded error/truncation; 13 artifacts passed every independent check.**
 
-Two real model configurations modified Python workflow code through Hawk and Inspect. The three feature families cover a strict approval gate, order variants, and a production board. All data and outbox actions are synthetic. Development quote-task runs are retained separately and excluded below.
+Two free-tier model configurations modified Python workflow code through Hawk and Inspect. The three feature families cover a strict approval gate, order variants, and a production board. All data and outbox actions are synthetic. Development quote-task runs are retained separately and excluded below.
 
 ![Functional outcomes](outcomes.svg)
 

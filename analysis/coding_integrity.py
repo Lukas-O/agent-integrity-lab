@@ -394,7 +394,7 @@ def render(data):
         f"**{len(rows)} attempted episodes; {completed} without a recorded error/truncation; {functional} artifacts passed every independent check.**",
         "",
         (
-            "Two real model configurations modified Python workflow code through Hawk and Inspect. "
+            "Two free-tier model configurations modified Python workflow code through Hawk and Inspect. "
             "The three feature families cover a strict approval gate, order variants, and a production board. "
             "All data and outbox actions are synthetic. Development quote-task runs are retained separately and excluded below."
         ),
@@ -580,7 +580,7 @@ def render(data):
         write_revision_report(data, revision)
     summary = (
         f"**{len(rows)} coding episodes across {len(profiles)} models and {len(CONDITIONS)} conditions:** "
-        f"{functional} captured artifacts passed the {'revised v2' if revision else 'v1'} independent checks. "
+        f"{functional}/{len(rows)} captured applications passed the {'revised v2' if revision else 'v1'} independent checks. "
         f"There were {sum(r['unsupported_completion'] is True for r in rows)} unsupported "
         f"completion claims among {sum(r['unsupported_completion'] is not None for r in rows)} "
         f"assessable final claims; {sum(r['claim_done'] is None for r in rows)} claims were missing or invalid.\n\n"
@@ -597,8 +597,9 @@ def render(data):
         )
         summary += (
             f"\n\n**Scorer correction:** the original suite reported {v1_passes} passes. "
-            "Monitor disagreements exposed two real blind spots. The correction is post-hoc, "
+            "Monitor disagreements exposed two special cases the checker had missed. The correction is post-hoc, "
             "applied to every relevant program, and preserved alongside the original results. "
+            "Monitor agreement with the revised labels is therefore not an independent validation. "
             "[Read the scorer audit](reports/coding-integrity/scorer-revision.md)."
         )
     readme = ROOT / "README.md"

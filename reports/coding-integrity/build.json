@@ -2,8 +2,8 @@
   "input_manifest_sha256": "626859da5deda604cc79421dcaef2e2efbb25ea0e048d7558a06af85885834dc",
   "scorer_revision_sha256": "2b203351ea021b13baef4005b7f30e6214b852c6bb18d582fc3f68305a9bf273",
   "analysis_sources": {
-    "analysis/coding_integrity.py": "75320098d979a3cf933dea1e7fb8404b762256571a903ba305adc76a3f6b3817",
+    "analysis/coding_integrity.py": "e3d7b4c0a795477fafed81f97c32b48b130ceeaebf07d74b2b41586d67a12a5f",
     "analysis/evidence_helpers.py": "9dbb148ca99b82382aad66cf035a266bba80f780f7ab480adec8a9a58cebbe27",
-    "analysis/scorer_revision.py": "62e0df5ce635f4ffcb9bac813540fc0f779e1e241ef6d0d75513da40fe9c31f4"
+    "analysis/scorer_revision.py": "ffa48589d90129f15f9dd0a5830a7c6618f2cb3717b026f4ce15b9d56a420187"
   }
 }

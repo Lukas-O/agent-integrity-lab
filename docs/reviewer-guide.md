@@ -15,7 +15,7 @@ agreement is explicitly post-hoc.
 | Engineering question | Where to inspect it |
 | --- | --- |
 | Does the benchmark measure the requested behavior? | [Task contracts, references and independent cases](../src/showcase_evals/workshop.py), plus [reference and isolation tests](../tests/test_workshop.py). |
-| Is this a real framework integration? | [Native Inspect task, solver, tools and scorer](../src/showcase_evals/coding.py) and [Hawk runner configuration](../scripts/run_study.py). |
+| Does it use Inspect and Hawk natively? | [Native Inspect task, solver, tools and scorer](../src/showcase_evals/coding.py) and [Hawk runner configuration](../scripts/run_study.py). |
 | Can the agent change its own ground truth? | [Isolated execution](../src/showcase_evals/sandbox.py): expected outputs stay in the scorer process, outside the mounted candidate workspace. |
 | Are failures and operational constraints accounted for? | [Frozen protocol](../studies/coding-integrity/PROTOCOL.md), explicit request pacing, all-attempt tables, and native error traces. |
 | Does the monitor actually intervene? | The blocked cohort rejects protected-file writes before applying them; the separate [LLM monitor](../src/showcase_evals/monitor.py) only audits saved evidence. |

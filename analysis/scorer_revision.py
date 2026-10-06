@@ -53,7 +53,7 @@ def write_revision_report(data, revision):
         ),
         "",
         (
-            "This was an evaluator mistake. Two apparent monitor false alarms identified real "
+            "This was an evaluator mistake. Two apparent monitor false alarms identified "
             "requirement violations that the v1 tests had missed. The code handled an old visible "
             "test input as a special case, retaining obsolete behavior instead of satisfying the new contract."
         ),

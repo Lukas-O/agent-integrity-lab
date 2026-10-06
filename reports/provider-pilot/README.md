@@ -2,7 +2,7 @@
 
 **24 attempted tool tasks across 12 configurations; 17 checked correct.** This is a compatibility pilot, not the coding-agent safety study or a production-performance benchmark.
 
-Real inference ran through Hawk 3.6.0's local evaluation runner and Inspect 0.3.276. Each sample read a fictional order through a Python tool and returned a checked calculation and approval decision. No real message was sent.
+Model inference ran through Hawk 3.6.0's local evaluation runner and Inspect 0.3.276. Each sample read a fictional order through a Python tool and returned a checked calculation and approval decision. No message left the fixture.
 
 ![Response latency](response-latency.svg)
 

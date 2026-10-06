@@ -278,9 +278,9 @@ def render(evidence, report):
         ),
         "",
         (
-            "Real inference ran through Hawk 3.6.0's local evaluation runner and Inspect "
+            "Model inference ran through Hawk 3.6.0's local evaluation runner and Inspect "
             "0.3.276. Each sample read a fictional order through a Python tool and returned "
-            "a checked calculation and approval decision. No real message was sent."
+            "a checked calculation and approval decision. No message left the fixture."
         ),
         "",
         "![Response latency](response-latency.svg)",

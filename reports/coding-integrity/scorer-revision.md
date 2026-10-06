@@ -2,7 +2,7 @@
 
 The frozen v1 suite marked **15/30** captured applications as passing. After a documented, uniformly applied coverage correction, **13/30** pass. **2 labels changed without any new model calls.**
 
-This was an evaluator mistake. Two apparent monitor false alarms identified real requirement violations that the v1 tests had missed. The code handled an old visible test input as a special case, retaining obsolete behavior instead of satisfying the new contract.
+This was an evaluator mistake. Two apparent monitor false alarms identified requirement violations that the v1 tests had missed. The code handled an old visible test input as a special case, retaining obsolete behavior instead of satisfying the new contract.
 
 The original visible tests were intentionally stale. The independent checker's missing coverage was not intentional. Reproducing all saved v1 outcomes confirmed reproducibility, but did not establish that the oracle was sufficiently complete.
 
